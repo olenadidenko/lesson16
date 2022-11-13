@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swep");
+
+[class*="__container"]{
+	max-width: 1275px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+ .wrapper{
+	overflow:hidden;
+	min-height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+ }
+ .wrapper >  main{
+	flex-grow: 1;
+ }
+body{
+	font-family: 'Lato';
+	color: #faf7f7;
+	background-color: #424551;
+}
+.page {
+	padding: 50px;
+}
+.page-main {
+}
+
+/*-----------------------form------------------------*/
+.form {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+}
+.form-person{
+	margin-bottom: 180px;
+}
+.form__checkbox:not(:last-child),
+.form__line:not(:last-child) {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.form__input {
+padding: 0 15px;
+height: 40px;
+color: blue;
+}
+
+.form__input::placeholder{} 
+.form__input:focus {
+	outline: 4px dotted red;
+}
+.input__form_chk,
+.input__form_radio{
+	width: auto;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+.form__lable{
+	display: inline-block;
+	margin-bottom: 10px;
+	color: white;
+ }
+
+.form__area{
+	resize: vertical;
+	width: 400px;
+	height: 200px;
+	padding: 10px;
+}
+
+/*-------кастомний чекбокс------*/
+.checkbox {
+	position: relative;
+}
+.checkbox__input {/*приховуємо input*/
+position: absolute;
+width: 0;
+height: 0;
+opacity: 0;
+}
+/*
+.checkbox__input:focus + .checkbox__lable{
+	outline: 1px solid white;
+	border-radius: 5px;
+}*/
+.checkbox__input:checked + .checkbox__lable::before{
+background: #123820 url('../image/icon/check.svg') center 70% no-repeat;
+}
+.checkbox__lable {
+	cursor: pointer;
+	display: inline-flex;
+	gap: 10px;
+}
+.checkbox__lable::before{
+	content: "";
+	height: 20px;
+	background-color: rgb(243, 243, 243);
+	border: 1px solid black;
+	border-radius: 1px;
+	flex: 0 0 20px;
+	width: 20px;
+}
+.checkbox-text {
+	align-self: center;
+}
+/*---------------домашка----------------*/
+.section{
+	background-color: #E5E5E5;
+}
+.section__questions {
+margin-bottom: 50px;
+}
+.questions {
+	display: flex;
+	flex-wrap: nowrap;
+	padding-top: 10px;
+}
+.questions__picture {
+	flex: 1 1 auto;
+	margin-top:57px ;
+}
+.questions__picture img {
+	width: 100%;
+}
+.questions__content {
+	
+}
+.content {
+	padding-left:100px;
+	color: #1E212C;
+	flex: 0 1 65%;
+}
+.content__subtitle {
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.content__title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+	margin-bottom:40px ;
+}
+.content__form {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap:25px;
+	column-gap: 24px;
+	margin-bottom: 25px;
+}
+.line-form {
+	
+}
+
+.line-form__item {
+	display: flex;
+	flex: 0 1 48.3%;
+	flex-direction: column;
+}
+.lable {
+	line-height: 160%;
+	color: #424551;
+	margin-bottom: 8px;
+}
+.input, .line-form__messege{
+	line-height: 160%;
+	color: #9A9CA5;
+	display: inline-flex;
+	padding: 13px 16px;
+	background-color: white;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	height: 52px;
+}
+.line-form-messege__item{
+	display: flex;
+	flex-direction: column;
+	flex:1 1 100%;
+}
+.line-form__messege {
+	min-height: 128px;
+	resize: vertical;
+}
+.checkbox-1{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-basis: 100%;
+}
+.checkbox-1__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	}
+	.checkbox-1__lable {
+	cursor: pointer;
+	display: inline-flex;
+	gap: 12px;
+	}
+
+.checkbox-1__lable::before{
+	content: "";
+	height: 16px;
+	background-color: white;
+	border: 1px solid #B3B7BC;
+	border-radius: 3px;
+	flex: 0 0 16px;
+	width: 16px;
+}
+.checkbox-1__input:checked + .checkbox-1__lable::before{
+	background: #FF3F3A url('../image/icon/check_1.svg') center 70% no-repeat;
+	}
+.checkbox-text {
+	align-self: center;
+}
+.form-button{
+	display: flex;
+	flex: 0 0 50%;
+	padding-left: 10px;
+}
+.button{
+	width: 100%;
+	height: 52px;
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	border-radius: 4px;
+	padding: 0px 40px;
+	align-items: center;
+	gap: 10px;
+	font-weight: 700;
+	line-height: 52px;
+	color: white;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
+/*---------------radio button----------------*/
+.section__radio {
+	margin: 0 auto;
+	background-color: white;
+}
+.radio-section {
+	width: 300px;
+	height: auto;
+	display: flex;
+	flex-direction:column;
+	box-shadow: 0 0 20px rgb(8, 8, 8, 0.3);
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	padding: 10px 25px;
+}
+.radio-section__image {
+	position: relative;
+	height: 282px;
+	width: 250px;
+	background-color: #F5E6FF;
+	border-radius: 30px;
+	margin-bottom: 32px;
+}
+
+.radio-section__image img{
+	width: 100%;
+	position: absolute;
+	top:15%;
+	left:0;
+	transform: scale(1.5);
+}
+.radio-section__title, .form-radio__size {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: black;
+	margin-bottom: 8px;
+}
+.radio-section__price {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 13px;
+}
+.price{
+}
+.price__item {
+}
+.price__item-sale {
+	font-size: 19px;
+	line-height: 23px;
+	color: #fe4258;
+	display: inline-flex;
+}
+.price__item-usual {
+	font-size: 19px;
+	line-height: 23px;
+	color:#11293B;
+	text-decoration: line-through;
+	display: inline-flex;
+	margin-left: 10px;
+}
+.form-radio{
+	display:inline-flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+.form-radio__input-box {
+	display: inline-flex;
+}
+.lable__size {
+	line-height: 23px;
+	color:#11293B;
+	display: inline-flex;
+	padding-left: 10px;
+}
+
+.button-radio{
+	background-color: #E7E9EB;
+	color:rgba(17, 41, 59, 1);
+	border-radius: 30px;
+	line-height: 170%;
+	width: 250px;
+	padding:16px 40px;
+	margin-bottom: 30px;
+}

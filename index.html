@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+	 <title>Lesson 16</title>
+  </head>
+  <body>
+	<div class="wrapper">
+		<header class="header">
+			
+		</header>
+		<main class="page">
+			<div class="page__wrapper">
+<!------головний тег форм------->
+				<div class="page__container">
+					<form class="form" method="post" enctype="multipart/form-data" action="#">
+						<div class="form__line">
+							<input class="form__input" required tabindex="2" name="age" placeholder="Enter your age" type="text">
+						</div>
+						<div class="form__line">
+							<input class="form__input" required tabindex="1" name="city" placeholder="Enter your city" type="text">
+						</div>
+						<div class="form__line">
+							<label for="email-01" class="form__lable">Enter your email</label>
+							<input id="email-01" class="form__input" required name="email" placeholder="Enter your email" type="email">
+						</div>
+						<div class="form__line">
+							<input class="form__input" required autocomplete="off" name="phone" placeholder="Enter your phone" type="tel">
+						</div>
+						<div class="form__line">
+							<input class="form__input" required autocomplete="off" name="password" placeholder="Enter your password" type="password">
+						</div>
+						<div class="form__line">
+							<input class="form__input" name="number" placeholder="Enter number" type="number">
+						</div>
+						<div class="form__line">
+							<input class="form__input" name="date" type="date" >
+						</div>
+						<div class="form__line">
+							<input class="form__input" name="range" type="range">
+						</div>
+						<div class="form__checkbox">
+							<input class="form__input input__form_chk" id="bag-01" name="bag" type="checkbox">
+							<label class="form__lable" for="bag-01">є багаж?</label>
+						</div>
+						<div class="form__line">
+							<div class="form__title">Якесь запитання?</div>
+							<div class="form__radio">
+								<input class="form__input input__form_radio" id="question-01" value="yes" name="question" type="radio">
+								<label class="form__lable" for="question-01">так є</label>
+							</div>
+							<div class="form__radio">
+								<input checked class="form__input input__form_radio" id="question-02" value="no" name="question" type="radio">
+								<label class="form__lable" for="question-02">без питань</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input" name="file" multiple accept="image/img, image/png" type="file"> 
+							</div>
+							<div class="form__line">
+								<textarea autocomplete="off" name="messege" class="form__area">123
+								</textarea>
+							</div>
+							<div class="form__line">
+								<button type="button">Я кнопка</button>
+							</div>
+							<select multiple name="size">
+								<option value="s">size S</option>
+								<option selected value="m">sizeM</option>
+								<option value="l">sizeL</option>
+							</select>
+						</div>
+					</form>
+					<form class="form form-person" method="post" enctype="multipart/form-data" action="#">
+						<div class="form__line">
+							<label for="name-01" class="form__lable">Enter your name</label>
+							<input id="name-01" class="form__input" required name="name" placeholder="Enter your name" type="text">
+						</div>
+						<div class="form__line">
+							<label for="password-01" class="form__lable">Enter your password</label>
+							<input id="password-01" class="form__input" required name="password" placeholder="Enter your password" type="password">
+						</div>
+						<div class="form__line">
+							<div class="checkbox">
+								<input id="car-05" type="checkbox" value="yes" name="car" class="checkbox__input">
+								<label for="car-05" class="checkbox__lable"><span class="checkbox-text">Є тачка?</span> </label>
+							</div>
+						</div>
+						<div class="form__line">
+							<div class="form__line">
+								<button type="button">Я кнопка</button>
+							</div>
+						</div>
+					</form>
+				</div>
+		<section class="section">
+			<div class="section__container">
+				<div class="section__questions questions">
+					<div class="questions__picture">
+						<img src="image/img/picture.svg" alt="picture">
+					</div>
+					<div class="questions__content content" >
+						<div class="content__subtitle">Any questions?</div>
+						<div class="content__title">Drop us a line</div>
+						<form class="content__form line-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+							<div class="line-form__item">
+								<label class="lable" for="name-02">First Name*</label>
+								<input class="input" required id="name-02" placeholder="Your first name" type="text">
+							</div>
+							<div class="line-form__item">
+								<label class="lable" for="last-name-01">Last  Name*</label>
+								<input class="input" required id="last-name-01" placeholder="Your last name" type="text">
+							</div>
+							<div class="line-form__item">
+								<label class="lable" for="email-02">Email*</label>
+								<input class="input" required id="email-02" placeholder="Your working email" type="email">
+							</div>
+							<div class="line-form__item">
+								<label class="lable" for="phone-02">Phone</label>
+								<input class="input" id="phone-02" value="" placeholder="Your phone number" type="tel">
+							</div>
+							<div class="line-form-messege__item">
+								<label class="lable" for="messege-01">Message*</label>
+								<textarea name="messege-01" id="messege-01" class="line-form__messege" placeholder="Your message"></textarea>
+							</div>
+							<div class="line-form__item checkbox-1">
+								<input class="checkbox-1__input" id="checkbox-hw" required type="checkbox" value="yes" name="agree" >
+								<label class="checkbox-1__lable" for="checkbox-hw" ><span>I agree to receive communications from Createx Online School</span></label>
+								<div class="line-form__button form-button">
+									<button class="form-button__item button" type="submit">Send message</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="section__radio radio-section">
+					<div class="radio-section__image">
+						<img src="image/img/PngItem_6616167.png" alt="shoose">
+					</div>
+					<div class="radio-section__title">Air Jordan</div>
+					<div class="radio-section__price price">
+						<ul>
+							<li class="price__item-sale">$199,00</li>
+							<li class="price__item-usual">$289,00</li>
+						</ul>
+					</div>
+					<form class="radio-section__form form-radio" action="https://jsonplaceholder.typicode.com/posts" method="post">
+						<div class="form-radio__size">Size</div>
+						<div class="form-radio__input-box input-box-37">
+							<input checked class="input-box__size" id="raddio-37" name="size-size" value="37" type="radio">
+							<label for="raddio-37" class="lable__size">37</label>
+						</div>
+						<div class="form-radio__input-box input-box-38">
+							<input checked class="input-box__size" id="raddio-38" name="size-size" value="38" type="radio">
+							<label for="raddio-38" class="lable__size">38</label>
+						</div>
+						<div class="form-radio__input-box input-box-39">
+							<input checked class="input-box__size" id="raddio-39" name="size-size" value="39" type="radio">
+							<label for="raddio-39" class="lable__size">39</label>
+						</div>
+					</form>
+					<button class="radio-section__button-radio button-radio" >Add to cart</button>
+				</div>
+			</div>
+		</section>
+			</div>
+		</main>
+		<footer class="footer"></footer>
+	</div>
+  </body>
+</html>
